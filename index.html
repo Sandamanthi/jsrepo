@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Text Editor - CT/2019/046</title>
+
+    <style>
+        .horizontalbar{
+            block-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            }
+
+
+        button{
+            border: none;
+            background: none;
+        }
+
+        #editor{
+            border: 1px solid #ccc;    
+            min-block-size: 450px;    /* Set the minimum height of the text editor */
+            inline-size: 90%;    /* Set the width of the text editor to 100% of its container */
+            padding: 10px; 
+            margin: 20px auto;     /*vertical margin is 20 and horizontal margin is set to auto */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="horizontalbar bg-info">
+                <button class="bold" onclick="bold()"><img src="Resources/bold-xxl.png" alt="Bold" width="15"></button>
+                <button class="underline" onclick="underline()"><img src="Resources/format_underline_white_192x192.png" alt="Underline" width="20"></button>
+                <button class="italic" onclick="italic()"><img src="Resources/italic-xxl.png" alt="Italic" width="15" height="15"></button>
+                <button class="color" onclick="fontcolor()"><img src="Resources/font_color.png" alt="Color" width="18"></button>
+                <button class="left" onclick="applyTextAlignment('left')"><img src="Resources/left.png" alt="Left" width="15" height="15"></button>
+                <button class="right" onclick="applyTextAlignment('right')"><img src="Resources/right.png" alt="Right" width="15" height="15"></button>
+                <button class="justify" onclick="applyTextAlignment('justify')"><img src="Resources/justify.png" alt="Justify" width="15" height="15"></button>
+                <button class="center" onclick="applyTextAlignment('center')"><img src="Resources/center.png" alt="Center" width="15" height="15"></button>
+                <button class="undo" onclick="undo()"><img src="Resources/undo-4-32.png" alt="Undo" width="15" height="15"></button>
+                <button class="redo" onclick="redo()"><img src="Resources/action-redo-32.png" alt="Redo" width="15" height="15"></button>
+        </div>
+    </div>
+    
+    <div id="editor" contenteditable="true" spellcheck="false"></div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="script.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+    <p>&nbsp;&nbsp;&nbsp;Author: S.S.Weerasinghe | CT/2019/046</p>
+</html>
