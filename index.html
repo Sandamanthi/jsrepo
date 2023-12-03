@@ -51,6 +51,13 @@
         function italic() {
             document.execCommand('italic', true, null);
         }
+
+        function fontcolor() {
+            var color = prompt('Enter color :');
+            if (color) {
+                document.execCommand('foreColor', false, color);
+            }
+        }
     </script>
 
     <div>
