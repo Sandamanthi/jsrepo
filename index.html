@@ -78,6 +78,15 @@
             document.getElementById('editor').style.textAlign = value;
         }
 
+        function undo() {
+            document.execCommand('undo', false, null);
+        }
+
+
+        function redo() {
+            document.execCommand('redo', false, null);
+        }
+
     </script>
 
     <div>
